@@ -9,16 +9,17 @@ export class MainCtrl {
             $scope.tag = tag;
             //console.log(tag);
         }
-            $scope.$watch('tag', function() {         
+        
+        $scope.$watch('tag', function() {         
             FlickrService.getEntries('Search',$scope.tag);
-            });
+        });
 
-            $scope.$on('getTagCompleted', function (event, params) {
-                var tags = params.response.who.tags.tag;
-                //console.log(tags);
-          $scope.$apply(function () {
-              angular.copy(tags, $scope.tags);
-          });
+        $scope.$on('getTagCompleted', function (event, params) {
+            var tags = params.response.who.tags.tag;
+            //console.log(tags);
+            $scope.$apply(function () {
+                angular.copy(tags, $scope.tags);
+            });
         });
 
         $scope.$on('getSearchCompleted', function (event, params) {
