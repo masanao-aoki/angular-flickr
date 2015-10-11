@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+<head>
+<link href="css/import.css">
+</head>
+<body>
+<div ng-app="myApp">
+    <div ng-controller="ajaxCtrl" class="ng-cloak" ng-cloak>
+    		<ul>
+    			<li ng-repeat="t in tags" ng-click='changeTug(t._content)'>{{ t._content }}</li>
+    		</ul>
+        <div ng-repeat="n in entries">
+            <p><img ng-src="http://farm{{ n.farm }}.staticflickr.com/{{ n.server }}/{{ n.id }}_{{ n.secret }}_s.jpg"></a>
+
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- build:js js/common.js -->
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/angular/angular.js"></script>
+<!-- endbuild -->
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+	"name": "websiteCreatePack",
+	"version": "0.0.0",
+	"private": true,
+
+	"devDependencies": {
+		"gulp": "",
+		"gulp-plumber": "",
+		"gulp-watch": "",
+
+		"gulp-compass": "",
+		"gulp-autoprefixer": "",
+		"gulp.spritesmith": "",
+
+		"gulp-postcss": "",
+		"precss": "",
+
+		"gulp-webpack": "",
+		"vinyl-named": "",
+
+		"gulp-uglify": "",
+		"gulp-minify-css": "",
+
+		"gulp-webpack": "",
+		"vinyl-named": "",
+		"babel-loader": "",
+
+		"gulp-usemin": "",
+
+		"gulp-connect": "",
+
+		"minimist": "",
+		"gulp-if": ""
+	},
+	"dependencies": {
+		"jquery": "",
+		"angular": "",
+		"ui-router": ""
+	}
+}
