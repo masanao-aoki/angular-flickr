@@ -23,5 +23,7 @@ export class Uri {
             }
             return uri; 
         }
+
+        return {getUri: this.getUri};
     }
 }

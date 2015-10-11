@@ -1,5 +1,6 @@
 export class Api {
-    constructor($scope, ajaxService) {
+    constructor($rootScope, uriService) {
+
         this.getEntries = function (type,name) {
             var url = uriService.getUri(type,name);
             //console.log(url);
@@ -15,5 +16,6 @@ export class Api {
                 }
             });
         }
+
     }
 }
