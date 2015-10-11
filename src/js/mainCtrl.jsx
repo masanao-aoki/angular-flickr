@@ -1,16 +1,16 @@
-export class AjaxCtrl {
-    constructor($scope, ajaxService) {
+export class MainCtrl {
+    constructor($scope, FlickrService) {
         $scope.entries = [];
         $scope.tags = [];
         $scope.tag = "";
-        ajaxService.getEntries("Tag","");
+        FlickrService.getEntries("Tag","");
 
         $scope.changeTug = function(tag) {
             $scope.tag = tag;
             //console.log(tag);
         }
             $scope.$watch('tag', function() {         
-            ajaxService.getEntries('Search',$scope.tag);
+            FlickrService.getEntries('Search',$scope.tag);
             });
 
             $scope.$on('getTagCompleted', function (event, params) {

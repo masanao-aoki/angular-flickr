@@ -1,14 +1,10 @@
 'use strict';
 
-var AjaxCtrl = require("./mainCtrl").AjaxCtrl;
-var Api = require("./api").Api;
-var Uri = require("./uri").Uri;
+var MainCtrl = require("./MainCtrl").MainCtrl;
+var FlickrService = require("./FlickrService").FlickrService;
 
 var myApp = angular.module('myApp', []);
 
+myApp.service('FlickrService', ($rootScope) => new FlickrService($rootScope));
 
-myApp.service('uriService', () => new Uri());
-
-myApp.service('ajaxService', ($rootScope, uriService) => new Api($rootScope, uriService));
-
-myApp.controller('ajaxCtrl', ($scope, ajaxService) => new AjaxCtrl($scope, ajaxService));
+myApp.controller('MainCtrl', ($scope, FlickrService) => new MainCtrl($scope, FlickrService));
