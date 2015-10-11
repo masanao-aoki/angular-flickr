@@ -1,4 +1,6 @@
-export var uri = myApp.service('uriService', function () {
+'use strict';
+
+angular.module('myApp').service('uriService', function () {
 	this.getUri = function (type,name) {
 		var name = encodeURI(name);
 		var uri = "";

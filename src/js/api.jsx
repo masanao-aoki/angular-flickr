@@ -1,4 +1,6 @@
-export var api = myApp.service('ajaxService', function ($rootScope, uriService) {
+'use strict';
+
+angular.module('myApp').service('ajaxService', function ($rootScope, uriService) {
     this.getEntries = function (type,name) {
         var url = uriService.getUri(type,name);
         //console.log(url);
