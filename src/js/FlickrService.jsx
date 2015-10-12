@@ -3,7 +3,7 @@ export class FlickrService {
         this.getEntries = function (type,name) {
             var name = encodeURI(name);
             var url = "";
-            var api_key = '23518cd2dc9536dc9aa21dea96a993a5';
+            var api_key = 'e2d99c3ff7885e30c624973bb84fdb09';
             var user_id = '126218952%40N06'
             var format = 'json';
             var nojsoncallback = 1;
