@@ -1,7 +1,7 @@
 'use strict';
 
-var MainCtrl = require("./MainCtrl").MainCtrl;
-var FlickrService = require("./FlickrService").FlickrService;
+import {MainCtrl} from './MainCtrl';
+import {FlickrService} from './FlickrService';
 
 var myApp = angular.module('myApp', []);
 
